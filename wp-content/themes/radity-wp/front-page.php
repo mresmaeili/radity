@@ -83,7 +83,7 @@ get_header();
   box-shadow: 0 0 6px rgba(92, 155, 229, 0.5);
 }
 
-/* Styling for the search results */
+/* search results */
 .search-results {
   list-style-type: none;
   padding: 0;
@@ -144,23 +144,8 @@ input.search-field {
   cursor: not-allowed;
 }
 
-/* Button styles */
-.prev-link a, .next-link a {
-  display: inline-block;
-  padding: 8px 12px;
-  background-color: #f2f2f2;
-  border: 1px solid #cccccc;
-  color: #333333;
-  text-decoration: none;
-  border-radius: 3px;
-  transition: background-color 0.3s ease;
-}
 
-.prev-link a:hover, .next-link a:hover {
-  background-color: #dddddd;
-}
-
-/* Page number styles */
+/* Page number */
 
 .prev-next-links {
   display: flex;
@@ -187,14 +172,28 @@ input.search-field {
   background-color: #dddddd;
 }
 
+/* Button styles */
+.prev-link a, .next-link a {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #f2f2f2;
+  border: 1px solid #cccccc;
+  color: #333333;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
 
+.prev-link a:hover, .next-link a:hover {
+  background-color: #dddddd;
+}
 
-
-
+/* SEARCH */
+.row.search {
+    display: block;
+}
 .search-form-container {
 position: relative;
-    margin-right: -15px;
-    margin-left: -15px;
 }
 
 form.search-form {
@@ -355,7 +354,7 @@ color: #000000;
 
 
 <div class="container-fluid">
-    
+    <div class="row search">
     <div class="search-form-container">
       <form role="search" method="get" class="search-form" action="">
         <label>
@@ -365,9 +364,9 @@ color: #000000;
       </form>
       <div id="search-results"></div>
     </div>
+    </div>
 
-
-    <div class="row align-items-stretch">
+    <div class="row postsgrid align-items-stretch">
             <?php
             // The Query
             $query_args = array(
