@@ -264,11 +264,12 @@ if ( ! function_exists( 'radity_wp_article_posted_on' ) ) :
 	 */
 	function radity_wp_article_posted_on() {
 		printf(
-			__( '<span class="sep">Posted on </span><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author-meta vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'radity-wp' ),
+__( '<div class="author"><span class="sep"> Author: </span> <span class="author-meta vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span></div> <div class="date"><span class="sep">Date: </span><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a><span class="by-author"></div> ', 'radity-wp' ),
 			esc_url( get_the_permalink() ),
 			esc_attr( get_the_date() . ' - ' . get_the_time() ),
 			esc_attr( get_the_date( 'c' ) ),
-			esc_html( get_the_date() . ' - ' . get_the_time() ),
+			esc_html( get_the_date()),
+// 			esc_html( get_the_date() . ' - ' . get_the_time() ),
 			esc_url( get_author_posts_url( (int) get_the_author_meta( 'ID' ) ) ),
 			sprintf( esc_attr__( 'View all posts by %s', 'radity-wp' ), get_the_author() ),
 			get_the_author()

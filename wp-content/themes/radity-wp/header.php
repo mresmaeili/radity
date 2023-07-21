@@ -3,7 +3,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+<link rel="icon" type="image/x-icon" href="https://www.radity.com/static/img/fav/favicon.ico">
 	<?php wp_head(); ?>
 </head>
 
@@ -79,7 +79,7 @@
 			if ( is_single() || is_archive() ) :
 		?>
 			<div class="row">
-				<div class="col-md-8 col-sm-12">
+				<div class="col-12">
 		<?php
 			endif;
 		?>
